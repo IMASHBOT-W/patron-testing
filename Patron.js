@@ -22606,15 +22606,7 @@ result = anu[Math.floor(Math.random() * anu.length)]
 NanoBotz.sendMessage(m.chat, { caption: `Title : ${result.title}\nCategory : ${result.type}\nDetail : ${result.source}\nMedia Url : ${result.image[2] || result.image[1] || result.image[0]}`, image: { url: result.image[0] } } , { quoted: m })
             }
             break
-case 'afk': {
-if (!m.isGroup) return reply(mess.only.group)
-if (!text) return replynano(`Example ${prefix+command} want to sleep`)
-let user = global.db.users[m.sender]
-user.afkTime = + new Date
-user.afkReason = args.join(" ")
-reply(`${m.pushName} Telah MelMelakukan AFK\nAlasan : ${args.join(" ") ? args.join(" ") : ''}`)
-}
-break
+
 case 'animewall': case 'animewallpaper':
 const { AnimeWallpaper } =require("anime-wallpaper")
 if(!q) return replynano('What wallpaper do you want?')
