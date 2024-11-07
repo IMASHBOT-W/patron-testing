@@ -22,4 +22,4 @@ COPY server.js .
 COPY start.sh .
 
 
-CMD ["bash","start.sh" ]
+CMD ["bash","start.sh"]
