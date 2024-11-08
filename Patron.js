@@ -8329,9 +8329,9 @@ Copy the link above and type the .ytmp3 link for audio and the .ytmp4 link for v
 NanoBotz.sendMessage(m.chat, { image : eek, caption: ngen }, { quoted: m})
 }
 break
-case 'play2': case 'song': case 'music': {
-if (!text) return replynano(`What song do you want, bitch?!, Tell me how to use this feature\nSample: ${prefix + command} lucid dream`);
-reply('wait a moment..')
+case 'play2': {
+if (!text) return replynano(`What song do you want, werey?!, Tell me how to use this feature\nSample: ${prefix + command} lucid dream`);
+reply('*wait a moment..*')
 try {
 let yts = require("youtube-yts")
 const { youtube } = require("btch-downloader")
@@ -10746,7 +10746,7 @@ break
   }
  break
 case 'git': case 'gitclone':
-if (!args[0]) return replynano(`Where is the link?\nExample :\n${prefix}${command} https://github.com/DGXeon/XeonMedia`)
+if (!args[0]) return replynano(`Where is the link?\nExample :\n${prefix}${command} https://github.com/Itzpatron/PATRON-MD`)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replynano(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -10755,8 +10755,9 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
     NanoBotz.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => replynano(mess.error))
 break
-case 'spotify': case 'spotifysearch': case 'play':  {
+case 'spotify': case 'spotifysearch': case 'play': case 'song': case 'music': {
 if (!text) return reply('Enter the song title!')
+reply('*wait a moment..*\nUse .play2 if you cant see this one')
 let result = await searchSpotify(text)
     let caption = result.map((v, i) => {
         return {
