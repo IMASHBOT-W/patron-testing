@@ -802,7 +802,7 @@ isForwarded: true,
 "showAdAttribution": true,
 "containsAutoReply": true,
 "title": `${global.botname}`,
-"body": `${nanoliatwaktu} ${pushname} �🏻`,
+"body": `${nanoliatwaktu} ${pushname} 🚹`,
 "previewType": "VIDEO",
 "thumbnailUrl": 'https://i.imgur.com/5wsWcjp.jpeg',
 "sourceUrl": 'https://whatsapp.com/channel/0029Val0s0rIt5rsIDPCoD2q'}}},
@@ -3509,9 +3509,11 @@ break
 
 case 'sc':
 case 'script':
+case 'support':
 case 'channel':
 case 'repo': {
-const text12 = `*Hi @${sender.split("@")[0]} �*
+const text12 = `*Hi @${sender.split("@")[0]} 🚹*
+
 𝐏𝐀𝐓𝐑𝐎𝐍-𝐌𝐃 𝐑𝐄𝐀𝐋𝐄𝐀𝐒𝐄𝐃 𝐎𝐍 𝐆𝐈𝐓𝐇𝐔𝐁
 
 *REPO LINK:* https://github.com/Itzpatron/PATRON-MD
@@ -3522,7 +3524,7 @@ const text12 = `*Hi @${sender.split("@")[0]} �*
 
 *READ THE README TO SEE MORE DEPLOYMENT OPTIONS*
 
-*DON'T FORGET TO STAR AND FORK REPO*
+*DON'T FORGET TO STAR AND FORK REPO AND FOLLOW MY CHANNEL*
 
 *NAMASTE 🚹*`
 NanoBotz.sendMessage(m.chat, {
@@ -3537,6 +3539,17 @@ sourceUrl: wagc,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, {quoted: m})
+}
+break
+case 'donate': {
+reply(`IF YOU WANT TO DONATE TO THE DEV OF THIS BOT
+*BANK DETAILS*
+🚹 _*FADARE*_
+
+🔢 2071718611
+
+🏦 _*KUDA*_
+*THANKS*`)
 }
 break
 case "owner": {
