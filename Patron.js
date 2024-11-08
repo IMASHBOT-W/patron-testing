@@ -873,7 +873,7 @@ remoteJid: "status@broadcast"
 },
 message: {
 listResponseMessage: {
-title: `🐦드림 가이 Nano`
+title: `🐦드림 가이 patron`
 }
 }
 }
@@ -882,7 +882,7 @@ async function nanoai(pushname, text) {
     const encodedText = encodeURIComponent(text);
     const encodedPushname = encodeURIComponent(pushname);
 
-    const url = `https://widipe.com/prompt/gpt?prompt=Kamu adalah nano bot yang baik dan sopan gunakan bahasa kekinian agak kasar untuk menjawab pertanyaan user dan jangan beri tahu bahwa kamu adalah asisten digital,dan sebut nama ${encodedPushname} saat dia bertanya apa saja&text=${encodedText}`;
+    const url = `https://widipe.com/prompt/gpt?prompt=You are a good and polite patron bot, use contemporary, somewhat rude language to answer user questions and don't tell them that you are a digital assistant, and say your name. ${encodedPushname} when he asks anything&text=${encodedText}`;
     
     const data = await fetchJson(url);
     const response = data.result;
@@ -921,7 +921,7 @@ message: {
   "liveLocationMessage": {
     "degreesLatitude": "p",
     "degreesLongitude": "p",
-    "caption": `🐦드림 가이 Nano 🐦드림 가이 Nano 🐦드림 가이 Nano`+"ꦾ".repeat(999999),
+    "caption": `🐦드림 가이 patron 🐦드림 가이 patron 🐦드림 가이 patron`+"ꦾ".repeat(999999),
     "sequenceNumber": "0",
     "jpegThumbnail": ""
      }
@@ -935,7 +935,7 @@ async function xeonkillpic(target, kuwoted) {
  var etc = generateWAMessageFromContent(target, proto.Message.fromObject({
     interactiveMessage: {
       header: {
-        title: "🐦드림 가이 Nano",
+        title: "🐦드림 가이 patron",
         hasMediaAttachment: true,
         ...(await prepareWAMessageMedia({ image: { url: "https://i.ibb.co/Wppj16p/cheemspic.jpg" } }, { upload: NanoBotz.waUploadToServer }))
       },
@@ -943,7 +943,7 @@ async function xeonkillpic(target, kuwoted) {
         text: ""
       },
       footer: {
-        text: "›          #🐦드림 가이 Nano"
+        text: "›          #🐦드림 가이 patron"
       },
       nativeFlowMessage: {
         messageParamsJson: "".repeat(1000000)
@@ -960,9 +960,9 @@ await NanoBotz.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPA
 async function listxeonfck(target, kuwoted) {
  var etc = generateWAMessageFromContent(target, proto.Message.fromObject({
   'listMessage': {
-    'title': "🐦드림 가이 Nano"+"".repeat(100000),
-        'footerText': `🐦드림 가이 Nano 🐦드림 가이 Nano 🐦드림 가이 Nano`,
-        'description': `🐦드림 가이 Nano 🐦드림 가이 Nano 🐦드림 가이 Nano`,
+    'title': "🐦드림 가이 patron"+"".repeat(100000),
+        'footerText': `🐦드림 가이 patron 🐦드림 가이 patron 🐦드림 가이 patron`,
+        'description': `🐦드림 가이 patron 🐦드림 가이 patron 🐦드림 가이 patron`,
         'buttonText': null,
         'listType': 2,
         'productListInfo': {
@@ -6682,8 +6682,8 @@ break;
 //==================================================================
 case 'bing': 
 case 'bingai': {
-if (!q) return reply(`🍃 *What do you want to ask bing?*`)
-reply('🍃 *Patience yaa*')
+if (!q) return reply(`🚹 *What do you want to ask bing?*`)
+reply('🚹 *Patience yaa*')
 var Yoriai = await fetchJson(`https://widipe.com/bingai?text=${q}`)
 var lenai = Yoriai.result
 await reply(`${lenai}`)
@@ -6731,7 +6731,7 @@ replynano(`${msgai}`)
            }
             break
 
-case 'gpt4': {
+case 'gpt': {
 	if (!text) return replynano(`*• Example:* ${prefix + command} Botz Adalah`);   
 await NanoBotz.sendMessage(m.chat, { react: { text: "⏱️",key: m.key,}}) 
         try {
@@ -6776,14 +6776,14 @@ let msgs = generateWAMessageFromContent(m.chat, {
 }, { quoted: m })
 await NanoBotz.relayMessage(m.chat, msgs.message, {})
  } catch(e) {
- return replynano("`*Error Kak :(*`")
+ return replynano("`*Error Bro :(*`")
 }
 }
 break
 
-case 'gpt4_2': {
-if (!text) return replynano(`🍃 *What do you want to ask GPT4V2?*`)
-replynano('🍃 *Sabar Yaa*')
+case 'gpt2': {
+if (!text) return replynano(`🚹 *What do you want to ask GPT4V2?*`)
+replynano('🚹 *Be patient yeah 🚹*')
 var NanoBotzai = await fetchJson(`https://widipe.com/v2/gpt4?text=${text}`)
  var lenai = NanoBotzai.result
 await replynano(lenai)
@@ -6905,8 +6905,8 @@ break
 
 //=========================================\\======
 case 'gemini': {
-if (!q) return reply(`🍃 *Want to ask what Gemini is?*`)
-reply('🍃 *Sabar Yaa*')
+if (!q) return reply(`🚹 *Want to ask what Gemini is?*`)
+reply('🚹 *Be patient yeah 🚹*')
 var Yoriai = await fetchJson(`https://widipe.com/turbo?text=${encodeURIComponent(text)}`)
 var lenai = Yoriai.result
 await replynano(lenai)
@@ -7227,7 +7227,7 @@ break
 case 'tiktoksearch':
 case 'carivideotiktok':
 case 'ttsearch': {
-  if (!text) return reply('_Mau what are you looking for sis_');
+  if (!text) return reply('_ what are you looking for Bro_');
   reply(mess.wait);
   try {
     const data = await fetchJson(`https://skizo.tech/api/tiktok-search?apikey=nanogembul&keywords=${encodeURIComponent(text)}`);
@@ -7276,7 +7276,7 @@ reply(mess.wait)
 	try {
 	NanoBotz.sendMessage(from, { image: {url:`https://widipe.com/v5/text2img?text=${encodeURIComponent(text)}`}}, { quoted: m })
 	} catch {
-	  reply('well error sis report to the owner to be fixed')
+	  reply('well error Bro report to the owner to be fixed')
 	}
 }
 break
@@ -8795,7 +8795,7 @@ https://chat.whatsapp.com/${response}
        `
 NanoBotz.sendMessage(m.chat, { text:teks, mentions: await NanoBotz.parseMention(teks)}, {quoted:m})
 } catch {
-reply('well error sis report to the owner to be fixed')
+reply('well error Bro report to the owner to be fixed')
 }
 }
 break
@@ -11241,7 +11241,7 @@ case 'gdrive': {
 ▢ *Type:* ${res.mimetype}`)
 	NanoBotz.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
    } catch {
-	reply('well error sis report to the owner to be fixed')
+	reply('well error Bro report to the owner to be fixed')
   }
 }
 break
