@@ -11248,7 +11248,7 @@ break
 case 'invite': {
 	if (!m.isGroup) return reply(mess.only.group)
 	if (!isBotAdmins) return reply('_The Bot should be an admin first_')
-if (!text) return replynano(`Please enter the number you want to invite\n\nSample :\n*${prefix + command}* 234xxxx`)
+if (!text) return replynano(`Please enter the number you want to invite\n\nSample :\n*${prefix + command}* 234xxxx\nUse .gclink to get group link`)
 if (text.includes('+')) return replynano(`Enter the number together without *+*`)
 if (isNaN(text)) return replynano(`Enter only the numbers plus your country code without spaces`)
 let group = m.chat
