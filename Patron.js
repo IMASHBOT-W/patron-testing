@@ -7895,7 +7895,7 @@ let {
 }
 break
 //==================================================================
-case 'setpppanjang': {
+case 'setpplength': {
 const jimp_1 = require('jimp')
 async function pepe(media) {
 	const jimp = await jimp_1.read(media)
@@ -7941,7 +7941,7 @@ async function pepe(media) {
 }
 break
 //==================================================================
-case 'setpppgcanjang': {
+case 'setpplong': {
 const jimp_1 = require('jimp')
 async function pepe(media) {
 	const jimp = await jimp_1.read(media)
@@ -8747,7 +8747,7 @@ case 'getbio':{
   }
 }
 break
-case 'setppbot': case 'setbotpp': {
+case 'setpp': case 'setbotpp': {
 if (!DanzTheCreator) return reply(mess.only.owner)
 if (!quoted) return replynano(`Send/Reply Pictures with Caption ${prefix + command}`)
 if (!/image/.test(mime)) return replynano(`Send/Reply Pictures with Caption ${prefix + command}`)
