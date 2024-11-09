@@ -3584,13 +3584,20 @@ const text12 = `*Hi @${sender.split("@")[0]} 🚹*
 
 *HOW TO DEPLOY ON PANEL:* https://youtu.be/ygIOzvZS0z0?si=HBG2WzpWO-2cBBkJ
 
+*DOWNLOAD LINK:* https://devuploads.com/odv6mkdw4o7f
+
 *CHANNEL LINK:* https://whatsapp.com/channel/0029Val0s0rIt5rsIDPCoD2q
 
-*READ THE README TO SEE MORE DEPLOYMENT OPTIONS*
+*DEPLOYMENT LINK:* 
+https://dash.navocloud.com/register?ref=KL4jFlFr
+
+*USE .UPDATE TO ALWAYS KEEP YOUR BOT UPDATED*
 
 *DON'T FORGET TO STAR AND FORK REPO AND FOLLOW MY CHANNEL*
 
-*NAMASTE 🚹*`
+*NAMASTE 🚹*
+
+*NOTICE* : *GO AND DOWNLOAD NEW ZIP IF YOU HAD OLD ONE*`
 NanoBotz.sendMessage(m.chat, {
 text: text12,
 contextInfo: {
@@ -6080,6 +6087,7 @@ break
 case 'tag': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+	if (!m.quoted) return replynano(`Reply message with caption ${prefix + command}`)
                NanoBotz.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: participants.map(a => a.id) })
                }
                break
@@ -6187,7 +6195,7 @@ case 'nulis':
 break;
 case 'ttslide': case 'tiktokslide':{
 if (!text) return replynano(`Use in a way ${prefix+command} *url*\n\n_Sample_\n\n${prefix+command} https://vt.tiktok.com/ZSL36LfEP/`)
-NanoBotz.sendMessage(m.chat, { react: { text: `⏱️`, key: m.key }})
+NanoBotz.sendMessage(m.chat, { react: { text: `🚹`, key: m.key }})
 try{
 let anu = await fetchJson(`https://widipe.com/download/tiktokslide?url=${text}`)
 for (let img of anu.result.images) {
@@ -6730,49 +6738,11 @@ case 'update': {
 //==================================================================
 //==================================================================
 case 'gpt': {
-	if (!text) return replynano(`*• Example:* ${prefix + command}Who is patron`);   
-await NanoBotz.sendMessage(m.chat, { react: { text: "⏱️",key: m.key,}}) 
+	if (!text) return replynano(`*• Example:* ${prefix + command} Botz Adalah`);   
+await NanoBotz.sendMessage(m.chat, { react: { text: "🚹",key: m.key,}}) 
         try {
 let gpt = await (await fetch(`https://widipe.com/gpt4?text=${text}`)).json()
-let msgs = generateWAMessageFromContent(m.chat, {
-  viewOnceMessage: {
-    message: {
-        "messageContextInfo": {
-          "deviceListMetadata": {},
-          "deviceListMetadataVersion": 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: '> GPT4 AI\n\n' + gpt.result
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: botname
-          }),
-          header: proto.Message.InteractiveMessage.Header.create({
-          hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./data/image/gpt.jpg')}, { upload: NanoBotz.waUploadToServer })  
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons: [{
-            "name": "quick_reply",
-              "buttonParamsJson": `{\"display_text\":\"Nice Gpt4 ✨\",\".mangap\":\"\"}`
-            }],
-          }),
-          contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363204138641225@newsletter',
-                  newsletterName: ownername,
-                  serverMessageId: 143
-                }
-                }
-       })
-    }
-  }
-}, { quoted: m })
-await NanoBotz.relayMessage(m.chat, msgs.message, {})
+replynano(gpt.result)
  } catch(e) {
  return replynano("`*Error Bro :(*`")
 }
@@ -6791,7 +6761,7 @@ break
     
 case 'realistic': case '3dmodel': {
     	if (!text) return reply(`*Example:* ${prefix + command} blue sky`)
-await NanoBotz.sendMessage(m.chat, { react: { text: "⏱️",key: m.key,}}) 
+await NanoBotz.sendMessage(m.chat, { react: { text: "🚹",key: m.key,}}) 
   try {
     let negative = 'bad, defective, noisy, opaque, distorted, unfocused, bad anatomy, additional limbs, bad face images, hands not well drawn, fingers disappear, adults, naked, 18+';
     let gpt = await (await fetch(`https://itzpire.com/ai/${command}?prompt=${text}`)).json();
@@ -6845,7 +6815,7 @@ case 'openai':
 case 'chatgpt':
 case 'open-ai': {
 	if (!text) return replynano(`*• Example:* ${prefix + command} Who has found a computer in the Majapahit era`) 
-await NanoBotz.sendMessage(m.chat, { react: { text: "⏱️",key: m.key,}}) 
+await NanoBotz.sendMessage(m.chat, { react: { text: "🚹",key: m.key,}}) 
   if (/image/.test(mime)) {
     const media = await NanoBotz.downloadAndSaveMediaMessage(quoted)
  	  let anuu = await UploadFileUgu(media)
