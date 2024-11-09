@@ -6726,77 +6726,11 @@ case 'update': {
 
 
 //==================================================================
-case 'aivo': {
-  if (!text) return replynano(`Example : ${command} Who is Jokowi`);
-  reply(mess.wait);
-  try {
-const ainya = await fetchJson(`https://widipe.com/ai/c-ai?prompt=kamu%20adalah%20Danz%20nano,%20yang%20memiliki%20sifat%20baik%20dan%20sopan%20,%20kamu%20memiliki%20chanel%20YouTube%20bernama%20danz%20nano&text=${encodeURIComponent(text)}`)
-const hangsul = ainya.result
-    await NanoBotz.sendMessage(m.chat, {
-      audio: { url: `https://nue-api.vercel.app/api/tts?lang=id&text=${hangsul}` },
-      mimetype: 'audio/mpeg',
-      ptt: true
-    }, { quoted: m });
-  } catch (error) {
-    console.error(error);
-    reply('Sorry, there was an error when contacting the server.');
-  }
-}
-break;
-//==================================================================
-case 'bing': 
-case 'bingai': {
-if (!q) return reply(`🚹 *What do you want to ask bing?*`)
-reply('🚹 *Patience yaa*')
-var Yoriai = await fetchJson(`https://widipe.com/bingai?text=${q}`)
-var lenai = Yoriai.result
-await reply(`${lenai}`)
-}
-break
-case 'bard':
-case 'bardai': {
-                if (!text) return replynano('What is your question?')
-                const data1 = await fetchJson(`https://skizo.tech/api/openai?apikey=nanogembul&text=${encodeURIComponent(text)}&system=I AM PATRON`)
-    const msgai = data1.result;
-replynano(`${msgai}`)
-           }
-            break
-//==================================================================
-case 'photoleapai': {
-	if (!text) return replynano('What is your question?')
-	let xeonfetch = await fetchJson(`https://vihangayt.me/tools/photoleap?q=${text}`)
-	NanoBotz.sendMessage(from, { image: {url:xeonfetch.data}}, { quoted: m })
-	}
-	break
-case 'prodia': {
-	if (!text) return replynano('what image want to make')
-	reply(mess.wait)
-	try {
-	let nanod = await fetchJson(`https://itzpire.com/ai/prodia?model=AOM3A3_orangemixs.safetensors%20%5B9600da17%5D&sampler=Euler%20a&prompt=${encodeURIComponent(text)}`)
-	const hasilnan = nanod.data.img
-	NanoBotz.sendMessage(from, { image: {url:hasilnan}}, { quoted: m })
-	} catch {
-	  reply('well error sis report to the owner to be fixed')
-	}
-	}
-	break
-	case 'lamaai': {
-                if (!text) return replynano('What is your question?')
-                const data1 = await fetchJson(`https://skizo.tech/api/openai?apikey=nanogembul&text=${encodeURIComponent(text)}&system=kamu adalah danz nano`)
-    const msgai = data1.result;
-replynano(`${msgai}`)
-           }
-            break
-            case 'geminiai': {
-                if (!text) return replynano('What is your question?')
-                const data1 = await fetchJson(`https://skizo.tech/api/openai?apikey=nanogembul&text=${encodeURIComponent(text)}&system=kamu adalah danz nano`)
-    const msgai = data1.result;
-replynano(`${msgai}`)
-           }
-            break
 
+//==================================================================
+//==================================================================
 case 'gpt': {
-	if (!text) return replynano(`*• Example:* ${prefix + command} Botz Adalah`);   
+	if (!text) return replynano(`*• Example:* ${prefix + command}Who is patron`);   
 await NanoBotz.sendMessage(m.chat, { react: { text: "⏱️",key: m.key,}}) 
         try {
 let gpt = await (await fetch(`https://widipe.com/gpt4?text=${text}`)).json()
