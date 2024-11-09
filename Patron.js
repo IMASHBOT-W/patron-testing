@@ -2909,6 +2909,70 @@ NanoBotz.sendMessage(from,{text:te,mentions: [y], },{quoted:m})
 replynano(`No one has not rented a Bot`)
 }
 break
+		case 'songguess': {
+  if (!m.isGroup) return reply(mess.only.group)
+if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) return replynano("There Are Still Unfinished Sessions!")
+ let anu = await JSON.parse(fs.readFileSync('./lib/tebaklagu.json'));
+ let result = anu[Math.floor(Math.random() * anu.length)]
+ let msg = await NanoBotz.sendMessage(from, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, {quoted:m})
+ NanoBotz.sendText(from, `The song is a song from?\n\nArtist : ${result.artist}\nTime : 60s`, msg).then(() => {
+ tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+ })
+ await sleep(60000)
+ if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
+ console.log("Jawaban: " + result.jawaban)
+ NanoBotz.sendMessage(m.chat, { image: { url: 'https://i.imgur.com/5wsWcjp.jpeg' }, caption:`Time Out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant to play? Type guess the song`},{quoted:m}) 
+ delete tebaklagu[m.sender.split('@')[0]]
+ }
+}
+break
+		case 'flagguess': {
+  if (!m.isGroup) return reply(mess.only.group)
+if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) return replynano("There Are Still Unfinished Sessions!")
+let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakbendera.json')
+let result = anu[Math.floor(Math.random() * anu.length)]
+NanoBotz.sendMessage(m.chat, {
+    image: {
+        url: result.img
+    },
+    caption: `Please answer the following image\n\nClue : ${result.flag}\nTime : 60s`
+}, {
+    quoted: m
+}).then(() => {
+    tebakbendera[m.sender.split('@')[0]] = result.name.toLowerCase()
+})
+await sleep(60000)
+if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) {
+    console.log("Answer: " + result.name)
+    NanoBotz.sendText(m.chat, `Time Out\nAnswer:  ${tebakbendera[m.sender.split('@')[0]]}`, m)
+    delete tebakbendera[m.sender.split('@')[0]]
+}
+}
+break
+//==================================================================
+case 'flagguessv2': {
+  if (!m.isGroup) return reply(mess.only.group)
+ if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) return replynano("There Are Still Unfinished Sessions!")
+let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakbendera.json')
+let result = anu[Math.floor(Math.random() * anu.length)]
+NanoBotz.sendMessage(m.chat, {
+    image: {
+        url: result.img
+    },
+    caption: `Please answer the following image\n\nClue : ${result.flag}\nTime : 60s`
+}, {
+    quoted: m
+}).then(() => {
+    tebakbendera[m.sender.split('@')[0]] = result.name.toLowerCase()
+})
+await sleep(60000)
+if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) {
+    console.log("Answer: " + result.name)
+    NanoBotz.sendText(m.chat, `Time Out\nAnswer:  ${tebakbendera[m.sender.split('@')[0]]}`, m)
+    delete tebakbendera[m.sender.split('@')[0]]
+}
+}
+break
 case 'clear': {
 if (!DanzTheCreator) return reply(mess.only.owner)
 NanoBotz.chatModify({ delete: true, lastMessages: [{ key: m.key, messageTimestamp: m.messageTimestamp }] }, m.chat)
