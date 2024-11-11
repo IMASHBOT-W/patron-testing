@@ -4527,7 +4527,7 @@ case 'resetgclink':
 case 'resetgruplink': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 NanoBotz.groupRevokeInvite(m.chat)
 }
 break
@@ -4584,7 +4584,7 @@ NanoBotz.sendMessage(m.chat, reactionMessage)
           }
 case 'autostickergc':
             case 'autosticker':
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (args.length < 1) return replynano('type auto sticker on to enable\ntype auto sticker off to disable')
 if (args[0]  === 'on'){
 if (isAutoSticker) return replynano(`Already activated`)
@@ -4601,7 +4601,7 @@ break
 case 'antivirus': case 'antivirtex': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (args[0] === "on") {
 if (antiVirtex) return replynano('Already activated')
 ntvirtex.push(from)
@@ -4691,7 +4691,7 @@ await NanoBotz.relayMessage(msg.key.remoteJid, msg.message, {
 case 'nsfw': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (args[0] === "on") {
 if (AntiNsfw) return replynano('Already activated')
 ntnsfw.push(from)
@@ -4781,7 +4781,7 @@ await NanoBotz.relayMessage(msg.key.remoteJid, msg.message, {
   case 'antilinkyoutubevideo': case 'antilinkyoutubevid': case 'antilinkytvid': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (args[0] === "on") {
 if (AntiLinkYoutubeVid) return replynano('Already activated')
 ntilinkytvid.push(from)
@@ -4900,7 +4900,7 @@ replynano('Success in turning off youtube channel antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -4990,7 +4990,7 @@ replynano('Success in turning off instagram antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5080,7 +5080,7 @@ replynano('Success in turning off facebook antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5170,7 +5170,7 @@ replynano('Success in turning off telegram antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5260,7 +5260,7 @@ replynano('Success in turning off tiktok antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5350,7 +5350,7 @@ replynano('Success in turning off twitter antilink in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5411,7 +5411,7 @@ await NanoBotz.relayMessage(msg.key.remoteJid, msg.message, {
               case 'antilink': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (args[0] === "on") {
 if (AntiLinkTwitter) return replynano('Already activated')
 ntilinkall.push(from)
@@ -5530,7 +5530,7 @@ replynano('Success in turning off antitoxic in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5620,7 +5620,7 @@ replynano('Success in turning off antiwame in this group')
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5711,7 +5711,7 @@ let msg = generateWAMessageFromContent(from, {
       },
       interactiveMessage: proto.Message.InteractiveMessage.create({
         body: proto.Message.InteractiveMessage.Body.create({
-          text: `Hai ${pushname}\nSilakan klik tombol di bawah untuk menggunakan _*${command}*_ command`
+          text: `Hi ${pushname}\nPlease click the button below to use _*${command}*_ command`
         }),
         footer: proto.Message.InteractiveMessage.Footer.create({
           text: botname
@@ -5786,7 +5786,7 @@ await replynano(`Done`)
 break
 case 'closetime': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
 if (args[1] == 'second') {
 var timer = args[0] * `1000`
@@ -5811,7 +5811,7 @@ break
            case 'ephemeral': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins) return reply('Specifically admin!!')
+if (!isAdmins) return reply('Specifically for admins!!')
 if (!text) return replynano('Enter the value enable/disable')
 if (args[0] === 'enable') {
 await NanoBotz.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL })
@@ -5850,7 +5850,7 @@ case 'd': {
             break
 case 'opentime': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
 if (args[1] == 'second') {
 var timer = args[0] * `1000`
@@ -5930,7 +5930,7 @@ const groupName = metadata.subject;
 break
 case 'kick': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await NanoBotz.groupParticipantsUpdate(m.chat, [users], 'remove')
@@ -5964,7 +5964,7 @@ if (!text) return replynano(`Where is the text?\nExample: ${prefix + command} pa
    case 'setnamegc': case 'setgroupname': case 'setsubject': {
 if (!m.isGroup) return reply(mess.only.group)
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
-if (!isAdmins) return reply('Specifically admin!!')
+if (!isAdmins) return reply('Specifically for admins!!')
 if (!text) return replynano('Text ?')
 await NanoBotz.groupUpdateSubject(m.chat, text)
 await replynano(`Done`)
@@ -6008,7 +6008,7 @@ break
 //=========================================\\
 case 'setppgroup': case 'setgcpp': case 'setgrouppp': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 if (!isBotAdmins) return reply('_The Bot should be the admin first_')
 if (!quoted) return replynano(`Where is the picture?`)
 if (!/image/.test(mime)) return replynano(`Send/Reply Pictures with Caption ${prefix + command}`)
@@ -6073,7 +6073,7 @@ await replynano(`Done`)
 break
 case 'hidetag': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 NanoBotz.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
 }
 break
@@ -6086,7 +6086,7 @@ break
 
 case 'tag': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 	if (!m.quoted) return replynano(`Reply message with caption ${prefix + command}`)
                NanoBotz.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: participants.map(a => a.id) })
                }
@@ -6094,7 +6094,7 @@ if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
 
 case 'tagall': {
 if (!m.isGroup) return reply(mess.only.group)
-if (!isAdmins && !DanzTheCreator) return reply('Specifically admin!!')
+if (!isAdmins && !DanzTheCreator) return reply('Specifically for admins!!')
 me = m.sender
 let teks = `╚»˙·٠${themeemoji}●♥ Tag All ♥●${themeemoji}٠·˙«╝ 
  
@@ -9722,28 +9722,6 @@ if (/yulibocil/.test(command)) heyy = await fetchJson('https://raw.githubusercon
 if (/yumeko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yumeko.json')
 let yeha = heyy[Math.floor(Math.random() * heyy.length)]
 NanoBotz.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
-}
-break
-case '>':
-if (!DanzTheCreator) return reply(mess.only.owner)
-var err = new TypeError
-err.name = "EvalError "
-err.message = "Code Not Found (404)"
-if (!q) return replynano(util.format(err))
-var arg = command == ">" ? args.join(" ") : "return " + args.join(" ")
-try {
-var txtes = util.format(await eval(`(async()=>{ ${arg} })()`))
-replynano(txtes)
-} catch(e) {
-let _syntax = ""
-let _err = util.format(e)
-let err = syntaxerror(arg, "EvalError", {
-allowReturnOutsideFunction: true,
-allowAwaitOutsideFunction: true,
-sourceType: "commonjs"
-})
-if (err) _syntax = err + "\n\n"
-replynano(util.format(_syntax + _err))
 }
 break
 case 'pushcontact': {
